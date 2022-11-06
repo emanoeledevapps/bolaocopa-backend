@@ -29,7 +29,7 @@ async function bootstrap(){
     await fastify.register(gameRoutes);
     await fastify.register(userRoutes);
 
-    await fastify.listen({port: process.env.PORT || 3333});
+    await fastify.listen({port: process.env.PORT});
 }
 
 bootstrap();
