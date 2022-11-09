@@ -121,7 +121,15 @@ export async function poolRoutes(fastify: FastifyInstance){
                         id: true,
                         user:{
                             select:{
+                                name: true,
                                 avatarUrl: true
+                            }
+                        },
+                        guesses: {
+                            select:{
+                                firstTeamPoints: true,
+                                secondTeamPoints: true,
+                                game: true,
                             }
                         }
                     },
@@ -161,7 +169,15 @@ export async function poolRoutes(fastify: FastifyInstance){
                         id: true,
                         user:{
                             select:{
+                                name: true,
                                 avatarUrl: true
+                            }
+                        },
+                        guesses: {
+                            select:{
+                                firstTeamPoints: true,
+                                secondTeamPoints: true,
+                                game: true,
                             }
                         }
                     },

@@ -23,6 +23,8 @@ CREATE TABLE "User" (
     "id" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
+    "password" TEXT NOT NULL,
+    "emailVerified" BOOLEAN NOT NULL DEFAULT false,
     "googleId" TEXT,
     "avatarUrl" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -36,6 +38,8 @@ CREATE TABLE "Game" (
     "date" TIMESTAMP(3) NOT NULL,
     "firstTeamCountryCode" TEXT NOT NULL,
     "secondTeamCountryCode" TEXT NOT NULL,
+    "firstTeamPoints" INTEGER NOT NULL DEFAULT -1,
+    "secondTeamPoints" INTEGER NOT NULL DEFAULT -1,
 
     CONSTRAINT "Game_pkey" PRIMARY KEY ("id")
 );
