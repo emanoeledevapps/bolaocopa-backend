@@ -7,7 +7,8 @@ async function main(){
         data:{
             name: 'John Doe',
             email: 'johndoe@email.com',
-            avatarUrl: 'https://github.com/emanoeledevapps.png'
+            avatarUrl: 'https://github.com/emanoeledevapps.png',
+            password: 'mudar@1234'
         }
     });
 
