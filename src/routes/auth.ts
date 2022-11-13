@@ -7,8 +7,18 @@ import {hash, compare} from 'bcryptjs';
 
 export async function authRoutes(fastify: FastifyInstance){
     fastify.get('/me',{onRequest: [authenticated]} ,async (req) => {
-
-        return {user: req.user}
+        const user = await prisma.user.findUnique({
+            where: {
+                id: req.user.sub
+            },
+            select: {
+                id: true,
+                avatarUrl: true,
+                name: true,
+                email: true
+            }
+        });
+        return {user}
     })
 
     fastify.post('/users', async (req) => {
