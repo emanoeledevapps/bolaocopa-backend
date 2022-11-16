@@ -179,7 +179,8 @@ export async function poolRoutes(fastify: FastifyInstance){
                                 secondTeamPoints: true,
                                 game: true,
                             }
-                        }
+                        },
+                        userId: true
                     }
                 },
                 owner: {
