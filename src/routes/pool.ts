@@ -180,8 +180,7 @@ export async function poolRoutes(fastify: FastifyInstance){
                                 game: true,
                             }
                         }
-                    },
-                    take: 4
+                    }
                 },
                 owner: {
                     select:{
